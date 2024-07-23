@@ -1,0 +1,26 @@
+@url = http://localhost:8080
+
+### POST 
+POST {{url}}/
+Content-Type: application/json
+
+{}
+
+### GET
+GET {{url}}/api/solarSystem/9
+
+
+### GET
+GET {{url}}/api/solarSystem/date/1
+
+### GET
+GET {{url}}/api/solarSystem/max-perimeter
+
+### GET
+GET {{url}}/api/periods/wheaterCondition/Rainy
+
+### GET
+GET {{url}}/api/periods/wheaterCondition/OptimalConditions
+
+### GET
+GET {{url}}/api/periods/wheaterCondition/Drought
