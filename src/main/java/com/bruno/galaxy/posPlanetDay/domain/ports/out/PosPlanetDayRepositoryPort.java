@@ -13,4 +13,7 @@ public interface PosPlanetDayRepositoryPort {
     Optional<PosPlanetDay> update(PosPlanetDay posPlanetDay);
     boolean deleteById(Long id);
     List<PosPlanetDay> findAllByPlanetId(Long planetId);
-}
+
+    List<PosPlanetDay> findAllBySolarDate(Long date);
+
+    }

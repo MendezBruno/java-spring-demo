@@ -11,7 +11,7 @@ GET {{url}}/api/solarSystem/9
 
 
 ### GET
-GET {{url}}/api/solarSystem/date/1
+GET {{url}}/api/solarSystem/date/72
 
 ### GET
 GET {{url}}/api/solarSystem/max-perimeter

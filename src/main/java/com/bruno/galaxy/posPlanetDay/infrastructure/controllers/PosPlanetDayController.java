@@ -31,6 +31,7 @@ public class PosPlanetDayController {
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
+
     @GetMapping
     public ResponseEntity<List<PosPlanetDay>> getAllPosPlanetDay() {
         List<PosPlanetDay> posPlanetDay = posPlanetDayService.getAllPosPlanetDay();
@@ -56,6 +57,12 @@ public class PosPlanetDayController {
     @GetMapping("/planet/{planetId}")
     public ResponseEntity<List<PosPlanetDay>> getAllPosPlanetDayByPlanetId(@PathVariable Long planetId) {
         List<PosPlanetDay> posPlanetDay = posPlanetDayService.getAllPosPlanetDayByPlanetId(planetId);
+        return new ResponseEntity<>(posPlanetDay, HttpStatus.OK);
+    }
+
+    @GetMapping("/date/{date}")
+    public ResponseEntity<List<PosPlanetDay>> getPosPlanetDayByDate(@PathVariable Long date) {
+        List<PosPlanetDay> posPlanetDay = posPlanetDayService.getAllPosPlanetDayByDate(date);
         return new ResponseEntity<>(posPlanetDay, HttpStatus.OK);
     }
 

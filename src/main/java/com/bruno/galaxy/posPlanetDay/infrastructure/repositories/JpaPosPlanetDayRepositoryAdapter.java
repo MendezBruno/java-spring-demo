@@ -63,6 +63,8 @@ public class JpaPosPlanetDayRepositoryAdapter implements PosPlanetDayRepositoryP
                 .collect(Collectors.toList());
     }
 
+    
+
     @Override
     public List<PosPlanetDay> createAllPosPlanetDay(List<PosPlanetDay> posPlanetDay) {
         List<PosPlanetDayEntity> posPlanetDayEntities = posPlanetDay.stream()
@@ -74,5 +76,11 @@ public class JpaPosPlanetDayRepositoryAdapter implements PosPlanetDayRepositoryP
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<PosPlanetDay> findAllBySolarDate(Long date) {
+        return jpaPosPlanetDayRepository.findBySolarDate(date).stream()
+                .map(PosPlanetDayEntity::toDomainModel)
+                .collect(Collectors.toList());
+    }
     
 }

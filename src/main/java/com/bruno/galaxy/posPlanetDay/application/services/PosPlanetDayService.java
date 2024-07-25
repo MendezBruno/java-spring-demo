@@ -59,5 +59,8 @@ public class PosPlanetDayService implements CreatePosPlanetDayUseCase, RetrieveP
         return createPosPlanetDayUseCase.createAllPosPlanetDay(posPlanetDays);
     }
 
-
+    @Override
+    public List<PosPlanetDay> getAllPosPlanetDayByDate(Long date) {
+        return retrievePosPlanetDayUseCase.getAllPosPlanetDayByDate(date);
+    }
 }

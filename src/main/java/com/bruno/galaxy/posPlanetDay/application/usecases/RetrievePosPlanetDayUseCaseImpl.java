@@ -29,4 +29,9 @@ public class RetrievePosPlanetDayUseCaseImpl implements RetrievePosPlanetDayUseC
     public List<PosPlanetDay> getAllPosPlanetDayByPlanetId(Long planetId) {
         return posPlanetDayRepositoryPort.findAllByPlanetId(planetId);
     }
+
+    @Override
+    public List<PosPlanetDay> getAllPosPlanetDayByDate(Long date) {
+        return posPlanetDayRepositoryPort.findAllBySolarDate(date);
+    }
 }

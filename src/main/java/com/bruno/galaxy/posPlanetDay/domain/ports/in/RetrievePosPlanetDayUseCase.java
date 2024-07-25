@@ -9,4 +9,5 @@ public interface RetrievePosPlanetDayUseCase {
     Optional<PosPlanetDay> getPosPlanetDayById(Long id);
     List<PosPlanetDay> getAllPosPlanetDay();
     List<PosPlanetDay> getAllPosPlanetDayByPlanetId(Long planetId);
+    List<PosPlanetDay> getAllPosPlanetDayByDate(Long date);
 }

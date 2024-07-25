@@ -14,4 +14,7 @@ public interface JpaPosPlanetDayRepository extends JpaRepository<PosPlanetDayEnt
 
     @Query("SELECT p FROM PosPlanetDayEntity p WHERE p.idPlanet = :planetId")
     List<PosPlanetDayEntity> findAllByPlanetId(@Param("planetId") Long planetId);
+
+    List<PosPlanetDayEntity> findBySolarDate(Long date);
+
 }
